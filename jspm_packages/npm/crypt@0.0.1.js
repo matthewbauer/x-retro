@@ -1,0 +1,1 @@
+module.exports = require("npm:crypt@0.0.1/crypt");
