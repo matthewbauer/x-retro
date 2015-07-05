@@ -1,0 +1,39 @@
+{
+  "name": "4do",
+  "version": "0.1.0",
+  "devDependencies": {},
+  "main": "index.js",
+  "description": "4do-libretro ============",
+  "_id": "4do@0.1.0",
+  "scripts": {},
+  "_shasum": "fe9e33ec514cf4feeae830a2ad0798718019937a",
+  "_from": ".",
+  "_npmVersion": "2.5.1",
+  "_nodeVersion": "0.12.0",
+  "_npmUser": {
+    "name": "matthewbauer",
+    "email": "mjbauer95@gmail.com"
+  },
+  "dist": {
+    "shasum": "fe9e33ec514cf4feeae830a2ad0798718019937a",
+    "tarball": "http://registry.npmjs.org/4do/-/4do-0.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "matthewbauer",
+      "email": "mjbauer95@gmail.com"
+    }
+  ],
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
+    "fs": "github:jspm/nodelibs-fs@^0.1.0",
+    "path": "github:jspm/nodelibs-path@^0.1.0",
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
+    "process": "github:jspm/nodelibs-process@^0.1.0"
+  }
+}

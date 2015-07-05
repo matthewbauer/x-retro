@@ -1,0 +1,91 @@
+{
+  "name": "fceumm",
+  "version": "0.1.0",
+  "devDependencies": {},
+  "main": "index.js",
+  "contributors": [
+    {
+      "name": "A list of people who have contributed code to FCE Ultra follows."
+    },
+    {
+      "name": "Please note that the \"Contributions\" field may not be all inclusive;"
+    },
+    {
+      "name": "the coder may have done more than what is listed."
+    },
+    {
+      "name": "Name/Alias\tContributions\t\t\tContact Information"
+    },
+    {
+      "name": "------------------------------------------------------------------------------"
+    },
+    {
+      "name": "Aaron Oneal\tMany changes to compile\t\thttp://www.morphgear.com"
+    },
+    {
+      "name": "with MSVC and first frame"
+    },
+    {
+      "name": "skipping code."
+    },
+    {
+      "name": "BERO\t\tBase FCE code.\t\t\tbero at geocities.co.jp"
+    },
+    {
+      "name": "CaH4e3 \t\tSome mapper code.\t\tCaH4e3 at mail dot ru"
+    },
+    {
+      "name": "Joe Nahmias\tman pages."
+    },
+    {
+      "name": "Mitsutaka \tYM2413 emulator."
+    },
+    {
+      "name": "Okazaki"
+    },
+    {
+      "name": "Paul \t\tVarious code for the official\tkuliniew at purdue.edu"
+    },
+    {
+      "name": "Kuliniewicz\tSDL port."
+    },
+    {
+      "name": "Quietust\tVRC7 \"translation\" code.\tquietust at ircN dot org"
+    },
+    {
+      "name": "Xodnizel        Most of the FCE Ultra code.     http://xodnizel.net/"
+    }
+  ],
+  "_id": "fceumm@0.1.0",
+  "scripts": {},
+  "_shasum": "780812f7b08855ae964db8d81d385dd1868bc234",
+  "_from": ".",
+  "_npmVersion": "2.5.1",
+  "_nodeVersion": "0.12.0",
+  "_npmUser": {
+    "name": "matthewbauer",
+    "email": "mjbauer95@gmail.com"
+  },
+  "dist": {
+    "shasum": "780812f7b08855ae964db8d81d385dd1868bc234",
+    "tarball": "http://registry.npmjs.org/fceumm/-/fceumm-0.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "matthewbauer",
+      "email": "mjbauer95@gmail.com"
+    }
+  ],
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
+    "fs": "github:jspm/nodelibs-fs@^0.1.0",
+    "path": "github:jspm/nodelibs-path@^0.1.0",
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
+    "process": "github:jspm/nodelibs-process@^0.1.0"
+  }
+}

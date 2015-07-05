@@ -1,0 +1,1 @@
+module.exports = require("npm:picodrive@0.1.0/index");

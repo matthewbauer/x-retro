@@ -1,0 +1,52 @@
+{
+  "author": {
+    "name": "Yoshinori Kohyama",
+    "url": "http://jp.linkedin.com/pub/yoshinori-kohyama/36/155/9b8"
+  },
+  "name": "md5",
+  "description": "Kohyama's jsMD5. See http://jsperf.com/md5-shootout. I'll replace this on npm with anything else.",
+  "keywords": [
+    "ender",
+    "md5",
+    "browser"
+  ],
+  "version": "1.0.1",
+  "homepage": "https://github.com/coolaj86/jsMD5",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coolaj86/jsMD5.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": "*"
+  },
+  "devDependencies": {},
+  "_npmUser": {
+    "name": "coolaj86",
+    "email": "coolaj86@gmail.com"
+  },
+  "_id": "md5@1.0.1",
+  "optionalDependencies": {},
+  "_engineSupported": true,
+  "_npmVersion": "1.1.19",
+  "_nodeVersion": "v0.6.16",
+  "_defaultsLoaded": true,
+  "dist": {
+    "shasum": "645802c673b8d3309a521abf37692a048eb97b4a",
+    "tarball": "http://registry.npmjs.org/md5/-/md5-1.0.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "coolaj86",
+      "email": "coolaj86@gmail.com"
+    }
+  ],
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0"
+  }
+}

@@ -1,0 +1,1 @@
+module.exports = require("npm:vecx@0.1.0/index");

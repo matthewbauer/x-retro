@@ -1,0 +1,188 @@
+{
+  "name": "picodrive",
+  "version": "0.1.0",
+  "devDependencies": {},
+  "main": "index.js",
+  "contributors": [
+    {
+      "name": "notaz"
+    },
+    {
+      "name": "core, 32X emulation, CD code, ARM asm renderers, dynamic recompilers,"
+    },
+    {
+      "name": "Pandora, GPH device, PSP, Gizmondo ports, CPU core hacks"
+    },
+    {
+      "name": "lots of additional coding",
+      "url": "see changeLog"
+    },
+    {
+      "name": "Homepage: http://notaz.gp2x.de/"
+    },
+    {
+      "name": "fDave"
+    },
+    {
+      "name": "project starter"
+    },
+    {
+      "name": "Cyclone 68000 core and PicoDrive core itself"
+    },
+    {
+      "name": "Chui"
+    },
+    {
+      "name": "FAME/C 68k interpreter core"
+    },
+    {
+      "url": "based on C68K by Stephane Dallongeville"
+    },
+    {
+      "name": "Stephane Dallongeville",
+      "url": "written"
+    },
+    {
+      "name": "CZ80 Z80 interpreter core"
+    },
+    {
+      "name": "Reesy & FluBBa"
+    },
+    {
+      "name": "DrZ80, the Z80 interpreter written in ARM assembly."
+    },
+    {
+      "name": "Homepage: http://reesy.gp32x.de/",
+      "url": "defunct"
+    },
+    {
+      "name": "Tatsuyuki Satoh, Jarek Burczynski, MAME development"
+    },
+    {
+      "name": "software implementation of Yamaha FM sound generator"
+    },
+    {
+      "name": "MAME development"
+    },
+    {
+      "name": "Texas Instruments SN76489 / SN76496 programmable tone/noise generator"
+    },
+    {
+      "name": "Homepage: http://www.mame.net/"
+    },
+    {
+      "name": "Eke-Eke"
+    },
+    {
+      "name": "CD graphics processor and CD controller implementation",
+      "url": "from Genesis Plus GX"
+    },
+    {
+      "name": "Additional thanks"
+    },
+    {
+      "name": "-----------------"
+    },
+    {
+      "name": "* Charles MacDonald",
+      "url": "http://cgfm2.emuviews.com/"
+    },
+    {
+      "name": "info about genesis hardware."
+    },
+    {
+      "name": "* Steve Snake for all that he has done for Genesis emulation scene."
+    },
+    {
+      "name": "* Stephane Dallongeville for writing Gens and making it open source."
+    },
+    {
+      "name": "* Tasco Deluxe for his reverse engineering work on SVP and some mappers."
+    },
+    {
+      "name": "* Bart Trzynadlowski for his SSFII and 68000 docs."
+    },
+    {
+      "name": "* Haze for his research",
+      "url": "http://mamedev.emulab.it/haze/"
+    },
+    {
+      "name": "* Lordus, Exophase and Rokas for various ideas."
+    },
+    {
+      "name": "* Nemesis for his YM2612, VDP research and docs."
+    },
+    {
+      "name": "* Eke-Eke for sharing the knowledge and his work on Genesis Plus GX."
+    },
+    {
+      "name": "* Many posters at spritesmind.net forums for valuable information."
+    },
+    {
+      "name": "* Mark and Jean-loup for zlib library."
+    },
+    {
+      "name": "* ketchupgun for the skin."
+    },
+    {
+      "name": "* GP2X specific help: rlyeh, Squidge, Dzz, A_SN, Alex and GP32X posters."
+    },
+    {
+      "name": "* Gizmondo code: Kingcdr, Reesy, jens.l",
+      "url": "for the device itself"
+    },
+    {
+      "name": "* Hardware: craigix",
+      "url": "GP2X"
+    },
+    {
+      "name": "and jens.l",
+      "url": "Gizmondo"
+    },
+    {
+      "name": "* Paul Cercueil for OpenDingux port."
+    },
+    {
+      "name": "* Inder for some graphics."
+    },
+    {
+      "name": "* squarepusher for some libretro fixes"
+    },
+    {
+      "name": "* Anyone else I forgot. Let me know if it's you."
+    }
+  ],
+  "description": "This is yet another Megadrive / Genesis / Sega CD / Mega CD / 32X / SMS emulator, which was written having ARM-based handheld devices in mind (such as smartphones and handheld consoles like GP2X and Pandora), but also runs on non-ARM little-endian hardwar",
+  "_id": "picodrive@0.1.0",
+  "scripts": {},
+  "_shasum": "cd64090b59b78dae0158cf6406cddfa34ea7e8b6",
+  "_from": ".",
+  "_npmVersion": "2.5.1",
+  "_nodeVersion": "0.12.0",
+  "_npmUser": {
+    "name": "matthewbauer",
+    "email": "mjbauer95@gmail.com"
+  },
+  "dist": {
+    "shasum": "cd64090b59b78dae0158cf6406cddfa34ea7e8b6",
+    "tarball": "http://registry.npmjs.org/picodrive/-/picodrive-0.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "matthewbauer",
+      "email": "mjbauer95@gmail.com"
+    }
+  ],
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
+    "fs": "github:jspm/nodelibs-fs@^0.1.0",
+    "path": "github:jspm/nodelibs-path@^0.1.0",
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
+    "process": "github:jspm/nodelibs-process@^0.1.0"
+  }
+}

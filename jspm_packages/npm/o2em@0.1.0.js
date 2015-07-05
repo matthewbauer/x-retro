@@ -1,0 +1,1 @@
+module.exports = require("npm:o2em@0.1.0/index");

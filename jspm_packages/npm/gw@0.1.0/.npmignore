@@ -1,0 +1,5 @@
+*
+!*.js
+!*.mem
+!package.json
+!.npmignore

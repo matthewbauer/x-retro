@@ -1,0 +1,1 @@
+module.exports = require("npm:snes9x-next@0.1.0/index");

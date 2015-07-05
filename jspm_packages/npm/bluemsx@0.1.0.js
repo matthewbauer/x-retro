@@ -1,0 +1,1 @@
+module.exports = require("npm:bluemsx@0.1.0/index");

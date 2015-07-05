@@ -1,0 +1,1 @@
+module.exports = require("npm:tyrquake@0.1.0/index");

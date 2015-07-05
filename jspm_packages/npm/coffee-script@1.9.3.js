@@ -1,0 +1,1 @@
+module.exports = require("npm:coffee-script@1.9.3/lib/coffee-script/coffee-script");
