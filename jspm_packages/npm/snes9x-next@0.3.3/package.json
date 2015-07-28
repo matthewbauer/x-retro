@@ -1,0 +1,7 @@
+{
+  "name": "snes9x-next",
+  "version": "0.3.3",
+  "dependencies": {},
+  "devDependencies": {},
+  "main": "cjs.js"
+}
