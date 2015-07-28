@@ -1,1 +1,0 @@
-module.exports = require("npm:vba-next@0.1.0/index");

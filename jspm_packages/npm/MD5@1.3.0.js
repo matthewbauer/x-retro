@@ -1,0 +1,1 @@
+module.exports = require("npm:MD5@1.3.0/md5");
