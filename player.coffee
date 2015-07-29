@@ -9,7 +9,6 @@ module.exports = class Player
   update: false
   overscan: false
   can_dupe: true
-  running: false
   latency: 180
   bufferSize: 256
 
@@ -145,28 +144,18 @@ module.exports = class Player
 
   input_poll: ->
 
-  video_refresh: (_data, @width, @height, pitch) =>
+  video_refresh: (data, @width, @height, pitch) =>
     @gl.canvas.width = @width
     @gl.canvas.height = @height
-    @gl.viewport 0, 0, @width, @height
+    @gl.viewport 0, 0, pitch / data.BYTES_PER_ELEMENT, @height
     switch @pixelFormat
       when @core.PIXEL_FORMAT_0RGB1555
-        data = new Uint16Array _data
         type = @gl.UNSIGNED_SHORT_5_5_5_1
         format = @gl.RGB
-      when @core.PIXEL_FORMAT_XRGB8888
-        data = new Uint8Array _data
-        format = @gl.RGBA
-        type = @gl.UNSIGNED_BYTE
       when @core.PIXEL_FORMAT_RGB565
-        data = new Uint16Array @width * @height
-        _data = new DataView _data.buffer, _data.byteOffset, _data.byteLength
-        for line in [0...@height]
-          for pixel in [0...@width]
-            data[line * @width + pixel] = _data.getUint16(line * pitch + pixel * 2, true)
         format = @gl.RGB
         type = @gl.UNSIGNED_SHORT_5_6_5
-    @gl.texImage2D @gl.TEXTURE_2D, 0, format, @width, @height, 0, format, type, data
+    @gl.texImage2D @gl.TEXTURE_2D, 0, format, pitch / data.BYTES_PER_ELEMENT, @height, 0, format, type, data
     @gl.drawArrays @gl.TRIANGLES, 0, 6
 
   audio_sample_batch: (left, right, frames) =>
@@ -239,17 +228,14 @@ module.exports = class Player
         true
 
   frame: (now) =>
-    return if not @running
-    requestAnimationFrame @frame
+    @requestID = requestAnimationFrame @frame
     elapsed = now - @then
     if elapsed > @fpsInterval
       @then = now - elapsed % @fpsInterval
-      @core.run()
+      @core.run() # should be moved to a web worker
 
   start: ->
-    @running = true
     @frame()
-    # setInterval @core.run, @fpsInterval
 
   stop: ->
-    @running = false
+    cancelAnimationFrame @requestID
