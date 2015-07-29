@@ -1,1 +1,0 @@
-module.exports = require("npm:charenc@0.0.1/charenc");

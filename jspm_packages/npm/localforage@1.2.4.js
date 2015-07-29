@@ -1,1 +1,0 @@
-module.exports = require("npm:localforage@1.2.4/src/localforage");
