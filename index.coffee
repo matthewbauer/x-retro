@@ -35,8 +35,14 @@ setInterval save, 10000 # ideally saving would only be done on exit
 addEventListener 'beforeunload', ->
   stop() if retro.player
 
+cores =
+  'snes9x-next': require 'snes9x-next'
+  'vba-next': require 'vba-next'
+  'vecx': require 'vecx'
+  'gambatte': require 'gambatte'
+
 loadCore = (corename) ->
-  System.import corename
+  cores[corename]
 
 load = (file) ->
   [..., extension] = file.name.split '.'
