@@ -1,3 +1,5 @@
+require 'web-audio-api-shim'
+
 # Player:
 #  @gl: WebGLContext
 #  @audio: AudioContext
@@ -10,7 +12,7 @@ module.exports = class Player
   overscan: false
   can_dupe: true
   latency: 180
-  bufferSize: 256
+  bufferSize: 22048
 
   constructor: (@gl, @audio, @inputs, @core, @game, @save) ->
     @initGL()
@@ -170,13 +172,8 @@ module.exports = class Player
       fill = @buffers[@bufIndex].length - @bufOffset
       if fill > frames
         fill = frames
-      @buffers[@bufIndex].copyToChannel (new Float32Array left, count * 4, fill), 0, @bufOffset
-      @buffers[@bufIndex].copyToChannel (new Float32Array right, count * 4, fill), 1, @bufOffset
-      @bufOffset += fill
-      count += fill
-      frames -= fill
-      if @bufOffset == @bufferSize
-        if @bufIndex == @numBuffers - 1
+      if @bufOffset >= @bufferSize - 1000
+        if @bufIndex >= @numBuffers - 1
           break
         if @bufIndex
           startTime = @buffers[@bufIndex - 1].endTime
@@ -189,6 +186,11 @@ module.exports = class Player
         source.start startTime
         @bufIndex++
         @bufOffset = 0
+      @buffers[@bufIndex].copyToChannel (new Float32Array left, count * 4, fill), 0, @bufOffset
+      @buffers[@bufIndex].copyToChannel (new Float32Array right, count * 4, fill), 1, @bufOffset
+      @bufOffset += fill
+      count += fill
+      frames -= fill
     count
 
   setVariable: (key, value) ->
