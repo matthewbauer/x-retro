@@ -1,6 +1,0 @@
-*
-!*.js
-!*.mem
-!*.bc
-!package.json
-!.npmignore

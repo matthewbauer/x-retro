@@ -1,1 +1,0 @@
-module.exports = require("npm:vba-next@0.3.3/cjs");

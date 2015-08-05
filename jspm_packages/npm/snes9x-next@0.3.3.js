@@ -1,1 +1,0 @@
-module.exports = require("npm:snes9x-next@0.3.3/cjs");

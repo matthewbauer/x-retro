@@ -1,1 +1,0 @@
-module.exports = require("npm:gambatte@0.3.3/cjs");

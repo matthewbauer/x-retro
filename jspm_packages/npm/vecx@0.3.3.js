@@ -1,1 +1,0 @@
-module.exports = require("npm:vecx@0.3.3/cjs");
