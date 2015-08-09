@@ -1,5 +1,3 @@
 node_modules
 npm-debug.log
 *.sav
-config.js
-jspm_packages

@@ -1,0 +1,36 @@
+{
+  "name": "snes9x-next",
+  "version": "0.4.6",
+  "devDependencies": {},
+  "jspm": {
+    "format": "amd",
+    "main": "retro.js"
+  },
+  "_id": "snes9x-next@0.4.6",
+  "scripts": {},
+  "_shasum": "9faf085eb977d879e12cf1fedd159d54f55eca01",
+  "_from": ".",
+  "_npmVersion": "2.5.1",
+  "_nodeVersion": "0.12.0",
+  "_npmUser": {
+    "name": "matthewbauer",
+    "email": "mjbauer95@gmail.com"
+  },
+  "dist": {
+    "shasum": "9faf085eb977d879e12cf1fedd159d54f55eca01",
+    "tarball": "http://registry.npmjs.org/snes9x-next/-/snes9x-next-0.4.6.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "matthewbauer",
+      "email": "mjbauer95@gmail.com"
+    }
+  ],
+  "format": "amd",
+  "main": "retro.js",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {}
+}

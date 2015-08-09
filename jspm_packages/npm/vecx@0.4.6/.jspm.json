@@ -1,0 +1,37 @@
+{
+  "name": "vecx",
+  "version": "0.4.6",
+  "devDependencies": {},
+  "jspm": {
+    "format": "amd",
+    "main": "retro.js"
+  },
+  "description": "vecx ====",
+  "_id": "vecx@0.4.6",
+  "scripts": {},
+  "_shasum": "9775e03c7d774501347711eb81595b0698bf1ed0",
+  "_from": ".",
+  "_npmVersion": "2.5.1",
+  "_nodeVersion": "0.12.0",
+  "_npmUser": {
+    "name": "matthewbauer",
+    "email": "mjbauer95@gmail.com"
+  },
+  "dist": {
+    "shasum": "9775e03c7d774501347711eb81595b0698bf1ed0",
+    "tarball": "http://registry.npmjs.org/vecx/-/vecx-0.4.6.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "matthewbauer",
+      "email": "mjbauer95@gmail.com"
+    }
+  ],
+  "format": "amd",
+  "main": "retro.js",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {}
+}

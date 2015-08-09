@@ -1,0 +1,39 @@
+{
+  "version": "0.4.5",
+  "license": "MIT",
+  "name": "document-register-element",
+  "description": "A stand-alone working lightweight version of the W3C Custom Elements specification",
+  "homepage": "https://github.com/WebReflection/document-register-element",
+  "keywords": [
+    "Web",
+    "Components",
+    "Custom",
+    "Element",
+    "Elements",
+    "DOM",
+    "W3C",
+    "Polymer",
+    "polyfill",
+    "alternative"
+  ],
+  "author": {
+    "name": "Andrea Giammarchi",
+    "web": "http://webreflection.blogspot.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/WebReflection/document-register-element.git"
+  },
+  "main": "./build/document-register-element.js",
+  "scripts": {
+    "test": "phantomjs testrunner.js",
+    "web": "IP=0.0.0.0 node node_modules/polpetta"
+  },
+  "devDependencies": {
+    "wru": "~0.2.x",
+    "uglify-js": "1.x",
+    "jshint": "~2.x",
+    "polpetta": "~0.3.x",
+    "phantomjs": "~1.x"
+  }
+}
