@@ -2,7 +2,7 @@
   "name": "webcomponents.js",
   "version": "0.7.10",
   "description": "webcomponents.js",
-  "main": "webcomponents.js",
+  "main": "webcomponents-lite.js",
   "directories": {
     "test": "tests"
   },
@@ -27,6 +27,9 @@
     "gulp-uglify": "^1.0.1",
     "run-sequence": "^1.0.1",
     "web-component-tester": "*"
+  },
+  "jspm": {
+    "main": "webcomponents-lite.js"
   },
   "registry": "github"
 }
