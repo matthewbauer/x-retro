@@ -10,7 +10,7 @@ System.config({
 System.config({
   "map": {
     "coffee": "github:forresto/system-coffee@0.1.2",
-    "document": "github:matthewbauer/document@0.0.3",
+    "document": "github:matthewbauer/document@0.0.4",
     "gambatte": "npm:gambatte@0.4.6",
     "gw": "npm:gw@0.4.6",
     "jszip": "github:stuk/jszip@2.5.0",
@@ -22,8 +22,8 @@ System.config({
     "vba-next": "npm:vba-next@0.4.6",
     "vecx": "npm:vecx@0.4.6",
     "window": "github:matthewbauer/window@0.0.3",
-    "github:matthewbauer/document@0.0.3": {
-      "document-register-element": "github:webreflection/document-register-element@0.4.5"
+    "github:matthewbauer/document@0.0.4": {
+      "webcomponentsjs": "github:webcomponents/webcomponentsjs@0.7.10"
     },
     "github:matthewbauer/window@0.0.3": {
       "web-audio-api-shim": "github:mohayonao/web-audio-api-shim@0.3.0"

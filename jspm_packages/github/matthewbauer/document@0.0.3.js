@@ -1,1 +1,0 @@
-export * from "github:matthewbauer/document@0.0.3/document";
