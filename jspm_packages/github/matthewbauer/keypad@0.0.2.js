@@ -1,1 +1,0 @@
-export * from "github:matthewbauer/keypad@0.0.2/index";
