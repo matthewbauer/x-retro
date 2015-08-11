@@ -31,8 +31,6 @@ stop = ->
   retro.stop()
   save()
 
-setInterval save, 10000
-
 addEventListener 'beforeunload', ->
   stop() if retro.player
 
@@ -59,10 +57,11 @@ load = (file) ->
           System.import cores[extension]
           # localForage.getItem retro.md5
         ]).then ([core, save]) ->
+          retro.inputs = []
           if navigator.getGamepads?
             retro.inputs = navigator.getGamepads()
-          if retro.inputs.length == 0
-            retro.inputs.push new KeyPad window,
+          if not retro.inputs[0]
+            retro.inputs[0] = new KeyPad window,
               9: 8
               13: 9
               16: 8

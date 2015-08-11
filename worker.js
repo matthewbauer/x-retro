@@ -2,7 +2,7 @@
 
 self.addEventListener('fetch', function (event) {
   event.respondWith(
-    caches.open('gametime-player-v7').then(function (cache) {
+    caches.open('gametime-player').then(function (cache) {
       return fetch(event.request).then(function (response) {
         cache.put(event.request, response.clone())
         return response
