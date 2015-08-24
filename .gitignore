@@ -1,3 +1,6 @@
 node_modules
 npm-debug.log
 *.sav
+jspm_packages
+!jspm_packages/system.js
+!jspm_packages/github/jmcriffey/bower-traceur-runtime@0.0.91/traceur-runtime.min.js

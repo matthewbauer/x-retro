@@ -1,0 +1,3 @@
+#!/bin/sh
+core=$1
+jspm bundle $core build-$core.js --minify --inject --skip-source-maps
