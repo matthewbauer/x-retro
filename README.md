@@ -16,6 +16,10 @@ and put this in your body:
 <canvas is="x-retro" src="/my-super-nintendo-rom.sfc" core="snes9x-next" autostart></canvas>
 ```
 
+## Test it out
+
+Visit [https://matthewbauer.us/x-retro/](https://matthewbauer.us/x-retro/) for a demo.
+
 ## Running locally
 
 ```sh
