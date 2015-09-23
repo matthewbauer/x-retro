@@ -1,15 +1,15 @@
 {
-  "name": "gametime-player",
-  "description": "Simple libretro frontend",
+  "name": "x-game",
+  "version": "1.0.0",
+  "description": "<x-game></x-game> - a game element for the web",
   "author": "Matthew Bauer <mjbauer95@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/matthewbauer/gametime-player.git"
+    "url": "https://github.com/matthewbauer/x-game.git"
   },
-  "main": "player.js",
+  "main": "build.js",
   "jspm": {
-    "main": "index.coffee",
-    "directories": {},
+    "main": "x-retro.js",
     "dependencies": {
       "coffee": "github:forresto/system-coffee@^0.1.2",
       "document": "github:matthewbauer/document@^0.0.4",
@@ -18,6 +18,7 @@
       "jszip": "github:stuk/jszip@^2.5.0",
       "keypad": "github:matthewbauer/keypad@^0.0.2",
       "nestopia": "npm:nestopia@^0.4.6",
+      "raw": "github:matthewbauer/plugin-raw@^0.3.1",
       "snes9x-next": "npm:snes9x-next@^0.4.6",
       "sparkmd5": "github:satazor/sparkmd5@^1.0.0",
       "vba-next": "npm:vba-next@^0.4.6",
@@ -46,19 +47,26 @@
     }
   },
   "devDependencies": {
-    "chromedriver": "^2.16.0",
+    "chai": "^3.2.0",
+    "chai-as-promised": "^5.1.0",
     "coffee-script": "^1.9.3",
     "html-inline": "^1.1.1",
     "html-minifier": "^0.7.2",
     "http-server": "^0.8.0",
     "jspm": "^0.16.0",
+    "lodash": "^3.10.1",
     "mocha": "^2.2.5",
-    "selenium-webdriver": "^2.46.1"
+    "selenium-webdriver": "^2.46.1",
+    "systemjs-builder": "^0.12.2",
+    "wd": "^0.3.12"
   },
   "scripts": {
     "start": "http-server",
     "install": "jspm install -y",
     "test": "mocha test.js",
     "build": "jspm bundle index.coffee! build.js --minify --inject --skip-source-maps"
-  }
+  },
+  "keywords": [
+    "web-components"
+  ]
 }
