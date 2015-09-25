@@ -66,7 +66,7 @@ PlayerElement.stop = function () {
   this.player.stop()
 }
 
-export default registerElement('x-retro', {
+export default registerElement('x-game', {
   prototype: PlayerElement,
   extends: 'canvas'
 })
