@@ -12,7 +12,7 @@ module.exports = class Player
   update: false
   overscan: false
   can_dupe: true
-  latency: 90
+  latency: 180
   bufferSize: 248
 
   constructor: (@gl, @audio, @inputs, @core, @game, @save) ->
