@@ -14,7 +14,6 @@
       "coffee": "github:forresto/system-coffee@^0.1.2",
       "document": "github:matthewbauer/document@^0.0.4",
       "jszip": "github:stuk/jszip@^2.5.0",
-      "keypad": "github:matthewbauer/keypad@^0.0.2",
       "raw": "github:matthewbauer/plugin-raw@^0.3.1",
       "sparkmd5": "github:satazor/sparkmd5@^1.0.0",
       "window": "github:matthewbauer/window@^0.0.3"

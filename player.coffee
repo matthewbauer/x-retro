@@ -12,8 +12,8 @@ module.exports = class Player
   update: false
   overscan: false
   can_dupe: true
-  latency: 180
-  bufferSize: 248
+  latency: 90
+  bufferSize: 2480
 
   constructor: (@gl, @audio, @inputs, @core, @game, @save) ->
     @initGL()
