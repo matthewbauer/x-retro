@@ -6,6 +6,7 @@ let PlayerElement = Object.create(HTMLCanvasElement.prototype)
 
 PlayerElement.inputs = []
 PlayerElement.attachedCallback = function () {
+  this.style['image-rendering'] = 'pixelated'
   if (this.hasAttribute('core')) {
     System.import(this.getAttribute('core')).then(function (core) {
       this.core = core
