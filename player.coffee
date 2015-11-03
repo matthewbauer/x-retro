@@ -150,18 +150,28 @@ module.exports = class Player
     @gl.canvas.width = @width
     @gl.canvas.height = @height
     switch @pixelFormat
+      when @core.PIXEL_FORMAT_0RGB1555
+        type = @gl.UNSIGNED_SHORT_5_5_5_1
+        format = @gl.RGBA
+        _data = new Uint16Array data.length
+        for pixel, i in data
+          _data[i] = pixel & 0b1000000000000000 >> 15 | pixel & 0b01111100000000000 << 1 | pixel & 0b0000001111100000 << 1 | pixel & 0b0000000000011111 << 1
+        @gl.viewport 0, 0, pitch / 2, @height
+        @gl.texImage2D @gl.TEXTURE_2D, 0, format, pitch / 2, @height, 0, format, type, _data
       when @core.PIXEL_FORMAT_XRGB8888
-        data = new Uint8Array data
-        for index, color of data
-          if color != 0 and color != 102
-            console.log color, index
         type = @gl.UNSIGNED_BYTE
-        format = @gl.RGB
-        @gl.viewport 0, 0, pitch / 4, @height
-        @gl.texImage2D @gl.TEXTURE_2D, 0, format, pitch / 4, @height, 0, format, type, new Uint8Array data
+        format = @gl.RGBA
+        data = new Uint8Array data
+        _data = new Uint8Array pitch * @height
+        for i in [0...pitch*@height] by 4
+          _data[i] = data[i+3]
+          _data[i+1] = data[i]
+          _data[i+2] = data[i+2]
+        @gl.viewport 0, 0, @width, @height
+        @gl.texImage2D @gl.TEXTURE_2D, 0, format, @width / 2, @height, 0, format, type, _data
       when @core.PIXEL_FORMAT_RGB565
-        format = @gl.RGB
         type = @gl.UNSIGNED_SHORT_5_6_5
+        format = @gl.RGB
         @gl.viewport 0, 0, pitch / 2, @height
         @gl.texImage2D @gl.TEXTURE_2D, 0, format, pitch / 2, @height, 0, format, type, data
     @gl.drawArrays @gl.TRIANGLES, 0, 6
@@ -225,6 +235,10 @@ module.exports = class Player
         @overscan
       when @core.ENVIRONMENT_GET_CAN_DUPE
         @can_dupe
+      when @core.ENVIRONMENT_GET_VARIABLE
+        return "rgb" if value.key == "nestopia_palette"
+        return "rgb" if value.key == "nestopia_blargg_ntsc_filter"
+        true
       when @core.ENVIRONMENT_SET_PERFORMANCE_LEVEL
         true
       when @core.ENVIRONMENT_SET_VARIABLES
