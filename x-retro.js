@@ -12,10 +12,10 @@ PlayerElement.attachedCallback = function () {
     }.bind(this)).then(function () {
       if (this.hasAttribute('src')) {
         return System.import(`${this.getAttribute('src')}!raw`).then(function (rom) {
-          this.game = new Uint8Array(rom)
+          this.core.load_game(new Uint8Array(rom))
           if (this.hasAttribute('save')) {
             return System.import(`${this.getAttribute('save')}!raw`).then(function (save) {
-              this.save = save
+              this.core.unserialize(save)
             }.bind(this))
           }
         }.bind(this))
@@ -37,6 +37,7 @@ Object.defineProperty(PlayerElement, 'core', {
   }
 })
 
+// TODO: deprecate retro.game
 Object.defineProperty(PlayerElement, 'game', {
   set: function (game) {
     this.player.game = game
@@ -47,6 +48,7 @@ Object.defineProperty(PlayerElement, 'game', {
   }
 })
 
+// TODO: deprecate retro.save
 Object.defineProperty(PlayerElement, 'save', {
   set: function (data) {
     this.core.unserialize(data)
