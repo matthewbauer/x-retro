@@ -53,7 +53,7 @@
     "start": "http-server",
     "install": "jspm install -y",
     "test": "npm run build",
-    "build": "jspm bundle index.coffee!"
+    "build": "jspm bundle-sfx x-retro.js"
   },
   "keywords": [
     "web-components"
