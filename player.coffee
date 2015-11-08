@@ -37,7 +37,12 @@ module.exports = class Player
 
     @av_info = @core.get_system_av_info()
 
-    # audio
+    @initAudio()
+
+    @core.load_game @game if @game?
+    @core.unserialize @save if @save?
+
+  initAudio: ->
     @then = 0
     @sampleRate = @av_info.timing.sample_rate
     @numBuffers = Math.floor @latency * @sampleRate / (1000 * @bufferSize)
@@ -50,9 +55,9 @@ module.exports = class Player
       i++
     @bufOffset = 0
     @bufIndex = 0
-
-    @core.load_game @game if @game?
-    @core.unserialize @save if @save?
+    @destination = @audio.createGain()
+    @destination.gain.value = 1
+    @destination.connect @audio.destination
 
   initGL: ->
     fragmentShader = @gl.createShader @gl.FRAGMENT_SHADER
@@ -200,7 +205,7 @@ module.exports = class Player
         @buffers[@bufIndex].endTime = startTime + @buffers[@bufIndex].duration
         source = @audio.createBufferSource()
         source.buffer = @buffers[@bufIndex]
-        source.connect @audio.destination
+        source.connect @destination
         source.start startTime
         @bufIndex++
         @bufOffset = 0
