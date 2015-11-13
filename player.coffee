@@ -195,7 +195,7 @@ module.exports = class Player
       fill = @buffers[@bufIndex].length - @bufOffset
       if fill > frames
         fill = frames
-      if @bufOffset >= @bufferSize
+      if @bufOffset + fill >= @bufferSize
         if @bufIndex >= @numBuffers - 1
           break
         if @bufIndex
