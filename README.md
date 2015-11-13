@@ -18,7 +18,7 @@ and put this in your body:
 
 ## Test it out
 
-Visit [https://matthewbauer.us/x-retro/](https://matthewbauer.us/x-retro/) for a demo.
+Visit [https://matthewbauer.us/gametime-player/](https://matthewbauer.us/gametime-player/) for a demo.
 
 ## Running locally
 
