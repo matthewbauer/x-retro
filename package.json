@@ -1,6 +1,5 @@
 {
   "name": "x-retro",
-  "version": "1.2.0",
   "description": "<x-retro></x-retro> - a libretro element for the web",
   "author": "Matthew Bauer <mjbauer95@gmail.com>",
   "repository": {
