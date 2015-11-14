@@ -31,11 +31,12 @@ module.exports = class Player
     @core.set_input_state @input_state
     @core.set_input_poll @input_poll
 
+    @then = 0
     @core.init()
 
   initAudio: ->
     @av_info = @core.get_system_av_info()
-    @then = 0
+    @fpsInterval = 1000 / @av_info.timing.fps
     @sampleRate = @av_info.timing.sample_rate
     @numBuffers = Math.floor @latency * @sampleRate / (1000 * @bufferSize)
     if @numBuffers < 2
@@ -248,7 +249,10 @@ module.exports = class Player
 
   frame: (now) =>
     @requestID = requestAnimationFrame @frame
-    @core.run()
+    elapsed = now - @then
+    if elapsed > @fpsInterval
+      @then = now - (elapsed % @fpsInterval)
+      @core.run()
 
   start: ->
     @frame()
