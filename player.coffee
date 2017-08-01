@@ -16,6 +16,8 @@ module.exports = class Player
   bufferSize: 2480
 
   constructor: (@gl, @audio, @inputs, @core, @game, @save) ->
+    @initGL()
+
     @pixelFormat = @core.PIXEL_FORMAT_0RGB1555
 
     @core.print = (args) ->
@@ -31,12 +33,17 @@ module.exports = class Player
     @core.set_input_state @input_state
     @core.set_input_poll @input_poll
 
-    @then = 0
     @core.init()
 
-  initAudio: ->
     @av_info = @core.get_system_av_info()
-    @fpsInterval = 1000 / @av_info.timing.fps
+
+    @initAudio()
+
+    @core.load_game @game if @game?
+    @core.unserialize @save if @save?
+
+  initAudio: ->
+    @then = 0
     @sampleRate = @av_info.timing.sample_rate
     @numBuffers = Math.floor @latency * @sampleRate / (1000 * @bufferSize)
     if @numBuffers < 2
@@ -121,14 +128,6 @@ module.exports = class Player
     @gl.pixelStorei @gl.UNPACK_FLIP_Y_WEBGL, true
 
   input_state: (port, device, index, id) =>
-    if id == @core.DEVICE_ID_JOYPAD_LEFT && @inputs[port]?.axes[0] < -.5
-      return true
-    if id == @core.DEVICE_ID_JOYPAD_RIGHT && @inputs[port]?.axes[0] > .5
-      return true
-    if id == @core.DEVICE_ID_JOYPAD_UP && @inputs[port]?.axes[1] < -.5
-      return true
-    if id == @core.DEVICE_ID_JOYPAD_DOWN && @inputs[port]?.axes[1] > .5
-      return true
     @inputs[port]?.buttons[{
       0: 0
       1: 2
@@ -257,10 +256,7 @@ module.exports = class Player
 
   frame: (now) =>
     @requestID = requestAnimationFrame @frame
-    elapsed = now - @then
-    if elapsed > @fpsInterval
-      @then = now - (elapsed % @fpsInterval)
-      @core.run()
+    @core.run()
 
   start: ->
     @frame()
