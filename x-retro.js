@@ -44,8 +44,6 @@ Object.defineProperty(PlayerElement, 'game', {
   set: function (game) {
     this.player.game = game
     this.core.load_game(game)
-    this.player.initAudio()
-    this.player.initGL()
   },
   get: function () {
     return this.player.game

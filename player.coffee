@@ -16,6 +16,8 @@ module.exports = class Player
   bufferSize: 2480
 
   constructor: (@gl, @audio, @inputs, @core, @game, @save) ->
+    @initGL()
+
     @pixelFormat = @core.PIXEL_FORMAT_0RGB1555
 
     @core.print = (args) ->
@@ -34,9 +36,17 @@ module.exports = class Player
     @then = 0
     @core.init()
 
-  initAudio: ->
     @av_info = @core.get_system_av_info()
+
     @fpsInterval = 1000 / @av_info.timing.fps
+
+    @initAudio()
+
+    @core.load_game @game if @game?
+    @core.unserialize @save if @save?
+
+  initAudio: ->
+    @then = 0
     @sampleRate = @av_info.timing.sample_rate
     @numBuffers = Math.floor @latency * @sampleRate / (1000 * @bufferSize)
     if @numBuffers < 2
