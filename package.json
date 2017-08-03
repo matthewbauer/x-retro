@@ -63,7 +63,7 @@
   "scripts": {
     "start": "http-server",
     "install": "jspm install -y",
-	"build": "sh ./build.sh"
+    "build": "sh ./build.sh"
   },
   "keywords": [
     "web-components"
